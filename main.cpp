@@ -19,39 +19,43 @@ int main(){
 	
 	cout << "Our C++ Calculator. \n";
 	
-	while ('n' != again){
+	do {
 		
 		cout << "(A)dd or (S)ubtract or (M)ultiply or (D)ivide? ";
 		cin >> op;
 		
-		if( ('A' == op) | ( 'a' == op)){
-			printoptions();
-			cout << num1 << " + " << num2 << " = " << (num1 + num2) << endl;
+		switch(op){
+			case 'a':
+			case 'A':
+				printoptions();
+				cout << num1 << " + " << num2 << " = " << (num1 + num2) << endl;
+				break;
+				
+			case 's':
+			case 'S':
+				printoptions();
+				cout << num1 << " - " << num2 << " = " << (num1 - num2) << endl;
+				break;
+			
+			case 'm':
+			case 'M':
+				printoptions();
+				cout << num1 << " x " << num2 << " = " << (num1 * num2) << endl;
+				break;
+				
+			case 'd':
+			case 'D':
+				printoptions();
+				cout << num1 << " / " << num2 << " = " << (num1 / num2) << endl;
+				break;
+				
+			default:
+				cout << op << " is not a valid option..." << endl;
 		}
-		
-		else if( ('S' == op) | ( 's' == op)){
-			printoptions();
-			cout << num1 << " - " << num2 << " = " << (num1 - num2) << endl;
-		}
-		
-		else if( ('M' == op) | ( 'm' == op)){
-			printoptions();
-			cout << num1 << " x " << num2 << " = " << (num1 * num2) << endl;
-		}
-		
-		else if( ('D' == op) | ( 'd' == op)){
-			printoptions();
-			cout << num1 << " / " << num2 << " = " << (num1 / num2) << endl;
-		}
-		
-		else {
-			cout << op << " is not a valid option..." << endl;
-		}
-		
-		
-		cout << "Do you want to use Calculator again (Y/n)? ";
+		cout << "\nDo you need to use the Calculator again (Y/n)? " << endl;
 		cin >> again;
-	}
+		
+	} while ( 'n'!=again);	
 	
 	return 0;
 }
