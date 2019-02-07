@@ -1,12 +1,20 @@
 #include <iostream>
 using namespace std;
 
+int num1=0;
+int num2=0;
+	
+void printoptions(){
+	cout << "Enter the first number: ";
+	cin >> num1;
+	cout << "Enter the second number: ";
+	cin >> num2;
+}
 int main(){
 	
 	char op = 'A';
 	char again = 'Y';
-	int num1=0;
-	int num2=0;
+	
 	
 	
 	cout << "Our C++ Calculator. \n";
@@ -17,34 +25,22 @@ int main(){
 		cin >> op;
 		
 		if( ('A' == op) | ( 'a' == op)){
-			cout << "Enter the first number: ";
-			cin >> num1;
-			cout << "Enter the second number: ";
-			cin >> num2;
+			printoptions();
 			cout << num1 << " + " << num2 << " = " << (num1 + num2) << endl;
 		}
 		
 		else if( ('S' == op) | ( 's' == op)){
-			cout << "Enter the first number: ";
-			cin >> num1;
-			cout << "Enter the second number: ";
-			cin >> num2;
+			printoptions();
 			cout << num1 << " - " << num2 << " = " << (num1 - num2) << endl;
 		}
 		
 		else if( ('M' == op) | ( 'm' == op)){
-			cout << "Enter the first number: ";
-			cin >> num1;
-			cout << "Enter the second number: ";
-			cin >> num2;
+			printoptions();
 			cout << num1 << " x " << num2 << " = " << (num1 * num2) << endl;
 		}
 		
 		else if( ('D' == op) | ( 'd' == op)){
-			cout << "Enter the first number: ";
-			cin >> num1;
-			cout << "Enter the second number: ";
-			cin >> num2;
+			printoptions();
 			cout << num1 << " / " << num2 << " = " << (num1 / num2) << endl;
 		}
 		
