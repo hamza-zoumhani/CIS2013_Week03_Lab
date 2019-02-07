@@ -13,7 +13,7 @@ int main(){
 	
 	while ('n' != again){
 		
-		cout << "(A)dd or (S)ubtract or (M)ultiply? ";
+		cout << "(A)dd or (S)ubtract or (M)ultiply or (D)ivide? ";
 		cin >> op;
 		
 		if( ('A' == op) | ( 'a' == op)){
@@ -39,6 +39,15 @@ int main(){
 			cin >> num2;
 			cout << num1 << " x " << num2 << " = " << (num1 * num2) << endl;
 		}
+		
+		else if( ('D' == op) | ( 'd' == op)){
+			cout << "Enter the first number: ";
+			cin >> num1;
+			cout << "Enter the second number: ";
+			cin >> num2;
+			cout << num1 << " / " << num2 << " = " << (num1 / num2) << endl;
+		}
+		
 		else {
 			cout << op << " is not a valid option..." << endl;
 		}
